@@ -436,14 +436,14 @@ git commit -m "Add profile photo, resume, and icon assets"
       <h1 class="title">Cristian Acevedo</h1>
       <p class="section__text__p2">Full-Stack Software Engineer</p>
       <div class="btn-container">
-        <a href="./assets/resume.pdf" target="_blank" class="btn btn-color-2">Download Resume</a>
+        <a href="./assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-color-2">Download Resume</a>
         <a href="#contact" class="btn btn-color-1">Contact Info</a>
       </div>
       <div id="socials-container">
-        <a href="https://github.com/CristianAce05" target="_blank" aria-label="GitHub">
+        <a href="https://github.com/CristianAce05" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
           <img src="./assets/icons/github.svg" class="icon" alt="GitHub" />
         </a>
-        <a href="https://linkedin.com/in/cristian-acevedo-368697352" target="_blank" aria-label="LinkedIn">
+        <a href="https://linkedin.com/in/cristian-acevedo-368697352" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
           <img src="./assets/icons/linkedin.svg" class="icon" alt="LinkedIn" />
         </a>
       </div>
@@ -821,25 +821,25 @@ git commit -m "Add experience/skills section"
         <h3>ThreatScope</h3>
         <p>Real-time network intrusion detection dashboard built with two other developers. Monitors live network traffic and visualizes cybersecurity threats.</p>
         <p class="project-tech">React · FastAPI · WebSockets · SQLite · Docker</p>
-        <a href="https://github.com/MicaelVR04/ThreatScope" target="_blank" class="btn btn-color-1">View Code</a>
+        <a href="https://github.com/MicaelVR04/ThreatScope" target="_blank" rel="noopener noreferrer" class="btn btn-color-1">View Code</a>
       </div>
       <div class="project-card">
         <h3>HBnB</h3>
         <p>Airbnb-style full-stack web app. Users can create accounts, list properties, and browse available places, with backend logic managing users, places, and reviews.</p>
         <p class="project-tech">Python · Flask · SQLite · RESTful APIs</p>
-        <a href="https://github.com/CristianAce05/holbertonschool-hbnb" target="_blank" class="btn btn-color-1">View Code</a>
+        <a href="https://github.com/CristianAce05/holbertonschool-hbnb" target="_blank" rel="noopener noreferrer" class="btn btn-color-1">View Code</a>
       </div>
       <div class="project-card">
         <h3>Task Manager</h3>
         <p>Full-stack task management app with secure authentication, full CRUD task management, search/filtering, and dark mode.</p>
         <p class="project-tech">React (Vite) · Node/Express · Supabase · JWT · Docker</p>
-        <a href="https://github.com/CristianAce05/task-manager_app_project" target="_blank" class="btn btn-color-1">View Code</a>
+        <a href="https://github.com/CristianAce05/task-manager_app_project" target="_blank" rel="noopener noreferrer" class="btn btn-color-1">View Code</a>
       </div>
       <div class="project-card">
         <h3>Simple Shell</h3>
         <p>Custom Unix command-line interpreter capable of executing basic shell commands, implementing command parsing and process execution.</p>
         <p class="project-tech">C · Linux system calls (fork, execve, wait) · GCC</p>
-        <a href="https://github.com/CristianAce05/holbertonschool-shell" target="_blank" class="btn btn-color-1">View Code</a>
+        <a href="https://github.com/CristianAce05/holbertonschool-shell" target="_blank" rel="noopener noreferrer" class="btn btn-color-1">View Code</a>
       </div>
     </div>
   </section>
@@ -937,7 +937,7 @@ git commit -m "Add projects section"
       </div>
       <div class="contact-info-container">
         <img src="./assets/icons/linkedin.svg" class="icon" alt="LinkedIn" />
-        <a href="https://linkedin.com/in/cristian-acevedo-368697352" target="_blank">LinkedIn</a>
+        <a href="https://linkedin.com/in/cristian-acevedo-368697352" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
     </div>
   </section>
