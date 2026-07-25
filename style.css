@@ -5,11 +5,17 @@
 :root {
   --color-bg: #f3f3f3;
   --color-card: #ffffff;
+  --color-card-alt: #f9f9f9;
   --color-text: #000000;
   --color-text-secondary: #555555;
+  --color-heading-alt: #333333;
+  --color-muted: #777777;
   --color-border: #a3a3a3;
+  --color-border-light: #dddddd;
   --color-accent: rgb(53, 53, 53);
   --color-accent-dark: rgb(0, 0, 0);
+  --color-link-hover: rgb(128, 128, 128);
+  --color-underline: rgb(181, 181, 181);
   --font-heading: "Poppins", sans-serif;
   --font-body: "Open Sans", sans-serif;
 }
@@ -57,7 +63,10 @@ a {
 }
 
 a:hover {
-  color: var(--color-accent);
+  color: var(--color-link-hover);
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: var(--color-underline);
 }
 
 :focus-visible {
@@ -106,13 +115,8 @@ nav {
   font-size: 1.5rem;
 }
 
-.nav-links a:hover {
-  text-decoration: underline;
-  text-underline-offset: 0.5rem;
-}
-
 .logo {
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: 600;
   cursor: default;
 }
@@ -200,44 +204,45 @@ section {
 #profile {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 5rem;
-  min-height: 80vh;
-  flex-wrap: wrap;
+  height: 80vh;
 }
 
 .section__pic-container {
   display: flex;
   height: 400px;
   width: 400px;
+  margin: auto 0;
 }
 
 .section__pic-container img {
   border-radius: 50%;
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: cover;
-  border: 0.3rem solid var(--color-card);
-  box-shadow: 0 0 0 0.2rem var(--color-accent);
 }
 
 .section__text {
+  align-self: center;
   text-align: center;
 }
 
+.section__text p {
+  font-weight: 600;
+}
+
 .section__text__p1 {
-  font-size: 1.5rem;
+  text-align: center;
 }
 
 .section__text__p2 {
   font-size: 1.75rem;
-  font-weight: 600;
-  color: var(--color-accent);
-  margin: 0.5rem 0 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .title {
   font-size: 3rem;
+  text-align: center;
 }
 
 #socials-container {
@@ -254,7 +259,7 @@ section {
 
 .icon {
   cursor: pointer;
-  height: 1.75rem;
+  height: 2rem;
 }
 
 /* BUTTONS */
@@ -263,7 +268,6 @@ section {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-top: 1.5rem;
 }
 
 .btn {
@@ -271,31 +275,36 @@ section {
   padding: 1rem;
   width: 8rem;
   border-radius: 2rem;
-  border: 0.1rem solid var(--color-text);
   cursor: pointer;
   display: inline-block;
   text-align: center;
 }
 
-.btn-color-1 {
+.btn:hover {
+  text-decoration: none;
+}
+
+.btn-color-1,
+.btn-color-2 {
+  border: var(--color-accent) 0.1rem solid;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
   background: var(--color-accent);
   color: white;
-  border-color: var(--color-accent);
 }
 
 .btn-color-1:hover {
   background: var(--color-accent-dark);
-  border-color: var(--color-accent-dark);
 }
 
 .btn-color-2 {
   background: none;
-  color: var(--color-text);
 }
 
 .btn-color-2:hover {
-  background: var(--color-text);
-  color: white;
+  border: white 0.1rem solid;
 }
 
 /* ABOUT */
@@ -318,7 +327,7 @@ section {
   flex: 1;
   min-width: 260px;
   max-width: 360px;
-  background: var(--color-card);
+  background: var(--color-bg);
   border-radius: 2rem;
   border: 0.1rem solid var(--color-border);
   text-align: center;
@@ -326,7 +335,6 @@ section {
 
 .details-container .icon {
   height: 2rem;
-  color: var(--color-accent);
   margin-bottom: 0.5rem;
 }
 
@@ -355,41 +363,47 @@ section {
 
 .experience-details-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  justify-content: center;
+  width: 100%;
   margin-top: 2rem;
 }
 
 .experience-sub-title {
-  color: var(--color-accent);
-  font-size: 1.25rem;
-  margin-bottom: 1.25rem;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
 }
 
 .article-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 1.25rem;
-  justify-content: center;
+  gap: 2.5rem;
+  justify-content: space-around;
   text-align: initial;
 }
 
 .article-container article {
   display: flex;
-  align-items: center;
+  width: 10rem;
+  justify-content: space-around;
   gap: 0.5rem;
 }
 
-.article-container article h3 {
-  font-size: 0.95rem;
-  font-weight: 400;
+.article-container article h4 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.article-container article p {
+  font-size: 0.85rem;
 }
 
 .article-container .icon {
-  height: 1.1rem;
-  margin-bottom: 0;
-  flex-shrink: 0;
+  cursor: default;
 }
 
 /* PROJECTS */
@@ -401,57 +415,52 @@ section {
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  margin-top: 2rem;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 2rem auto 0;
 }
 
 .project-card {
-  background: var(--color-card);
-  border: 0.1rem solid var(--color-border);
+  background: var(--color-card-alt);
+  border: 1px solid var(--color-border-light);
   border-radius: 1rem;
   padding: 1.5rem;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .project-card h3 {
-  color: var(--color-text);
   font-size: 1.5rem;
+  color: var(--color-heading-alt);
+  margin-bottom: 0.5rem;
 }
 
 .project-card-img {
-  width: calc(100% + 3rem);
-  margin: -1.5rem -1.5rem 0.5rem;
-  border-radius: 1rem 1rem 0 0;
+  border-radius: 1rem;
+  width: 100%;
   height: auto;
   max-height: 200px;
   object-fit: cover;
+  margin-bottom: 1rem;
 }
 
 .project-card-subtitle {
-  color: var(--color-text-secondary);
-  font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  color: var(--color-muted);
+  margin-bottom: 1rem;
 }
 
 .project-tech {
-  font-size: 0.85rem;
-  font-style: italic;
-}
-
-.project-card .btn {
-  align-self: center;
-  margin-top: auto;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 /* CONTACT */
@@ -466,24 +475,31 @@ section {
 
 .contact-info-upper-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
-  margin-top: 2rem;
+  border-radius: 2rem;
+  border: 0.1rem solid var(--color-border);
+  margin: 2rem auto;
+  padding: 0.5rem;
 }
 
 .contact-info-container {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  background: var(--color-card);
-  border: 0.1rem solid var(--color-border);
-  border-radius: 2rem;
-  padding: 0.9rem 1.75rem;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
 }
 
-.contact-info-container a:hover {
-  text-decoration: underline;
+.contact-info-container a {
+  font-size: 1.2rem;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
 }
 
 /* FOOTER */
