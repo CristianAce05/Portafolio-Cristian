@@ -260,6 +260,20 @@ section {
   height: 2rem;
 }
 
+.icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  padding: 0.4rem;
+}
+
+.icon-badge .icon {
+  display: block;
+  filter: invert(1) brightness(2);
+}
+
 /* BUTTONS */
 
 .btn-container {
@@ -331,8 +345,7 @@ section {
   text-align: center;
 }
 
-.details-container .icon {
-  height: 2rem;
+.details-container .icon-badge {
   margin-bottom: 0.5rem;
 }
 
@@ -399,7 +412,7 @@ section {
   font-size: 0.85rem;
 }
 
-.article-container .icon {
+.article-container .icon-badge {
   cursor: default;
 }
 
