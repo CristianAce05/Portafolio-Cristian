@@ -150,6 +150,7 @@ h2,
 h3,
 .logo,
 .nav-links,
+.menu-links,
 .btn {
   font-family: var(--font-heading);
 }
