@@ -5,11 +5,11 @@
 :root {
   --color-bg: #f3f3f3;
   --color-card: #ffffff;
-  --color-text: #141414;
+  --color-text: #000000;
   --color-text-secondary: #555555;
   --color-border: #a3a3a3;
-  --color-accent: #2563eb;
-  --color-accent-dark: #1d4ed8;
+  --color-accent: rgb(53, 53, 53);
+  --color-accent-dark: rgb(0, 0, 0);
   --font-heading: "Poppins", sans-serif;
   --font-body: "Open Sans", sans-serif;
 }
