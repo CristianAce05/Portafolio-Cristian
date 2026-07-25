@@ -93,6 +93,10 @@ nav {
   justify-content: space-around;
   align-items: center;
   height: 17vh;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--color-bg);
 }
 
 .nav-links {
@@ -159,6 +163,7 @@ nav {
   width: fit-content;
   max-height: 0;
   overflow: hidden;
+  visibility: hidden;
   transition: all 0.3s ease-in-out;
   border-radius: 0 0 0.5rem 0.5rem;
 }
@@ -176,6 +181,7 @@ nav {
 
 .menu-links.open {
   max-height: 300px;
+  visibility: visible;
 }
 
 /* SECTIONS */
@@ -183,6 +189,7 @@ nav {
 section {
   padding-top: 4vh;
   margin: 0 10rem;
+  scroll-margin-top: 17vh;
   box-sizing: border-box;
   min-height: fit-content;
 }
