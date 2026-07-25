@@ -1038,8 +1038,9 @@ git commit -m "Add contact section and footer"
 function toggleMenu() {
   const hamburgerIcon = document.querySelector(".hamburger-icon");
   const menuLinks = document.querySelector(".menu-links");
-  hamburgerIcon.classList.toggle("open");
+  const isOpen = hamburgerIcon.classList.toggle("open");
   menuLinks.classList.toggle("open");
+  hamburgerIcon.setAttribute("aria-expanded", isOpen);
 }
 ```
 
