@@ -150,6 +150,7 @@ h2,
 h3,
 .logo,
 .nav-links,
+.menu-links,
 .btn {
   font-family: var(--font-heading);
 }
@@ -166,7 +167,6 @@ a,
 a {
   color: var(--color-text);
   text-decoration: none;
-  font-family: var(--font-body);
 }
 
 a:hover {

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cristian Acevedo | Full-Stack Software Engineer</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./mediaqueries.css" />
+</head>
+<body>
+  <nav id="desktop-nav">
+    <div class="logo">Cristian Acevedo</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Cristian Acevedo</div>
+    <div class="hamburger-menu">
+      <div
+        class="hamburger-icon"
+        role="button"
+        tabindex="0"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        onclick="toggleMenu()"
+        onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleMenu(); }"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./assets/profile-pic.png" alt="Cristian Acevedo" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Cristian Acevedo</h1>
+      <p class="section__text__p2">Full-Stack Software Engineer</p>
+      <div class="btn-container">
+        <a href="./assets/resume.pdf" target="_blank" class="btn btn-color-2">Download Resume</a>
+        <a href="#contact" class="btn btn-color-1">Contact Info</a>
+      </div>
+      <div id="socials-container">
+        <a href="https://github.com/CristianAce05" target="_blank" aria-label="GitHub">
+          <img src="./assets/icons/github.svg" class="icon" alt="GitHub" />
+        </a>
+        <a href="https://linkedin.com/in/cristian-acevedo-368697352" target="_blank" aria-label="LinkedIn">
+          <img src="./assets/icons/linkedin.svg" class="icon" alt="LinkedIn" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about"></section>
+
+  <section id="experience"></section>
+
+  <section id="projects"></section>
+
+  <section id="contact"></section>
+
+  <footer>
+    <p>Copyright &#169; 2026 Cristian Acevedo. All Rights Reserved.</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
