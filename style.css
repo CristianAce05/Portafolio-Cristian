@@ -343,9 +343,9 @@ section {
 }
 
 .about-bio {
-  max-width: 700px;
+  max-width: none;
   margin: 1rem auto 0;
-  font-size: 1.1rem;
+  font-size: 1.35rem;
 }
 
 /* EXPERIENCE */
