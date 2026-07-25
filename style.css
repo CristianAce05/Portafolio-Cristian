@@ -102,7 +102,7 @@ nav {
 .nav-links {
   gap: 2rem;
   list-style: none;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 .nav-links a:hover {
@@ -262,11 +262,13 @@ section {
 
 .btn {
   font-weight: 600;
-  padding: 0.9rem 1.5rem;
+  padding: 1rem;
+  width: 8rem;
   border-radius: 2rem;
   border: 0.1rem solid var(--color-text);
   cursor: pointer;
   display: inline-block;
+  text-align: center;
 }
 
 .btn-color-1 {
