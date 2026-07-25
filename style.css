@@ -269,9 +269,11 @@ section {
 }
 
 .btn {
+  font-family: Arial, sans-serif;
+  font-size: 13.3333px;
   font-weight: 600;
   padding: 1rem;
-  width: 10.2rem;
+  width: 8rem;
   border-radius: 2rem;
   cursor: pointer;
   display: inline-block;
