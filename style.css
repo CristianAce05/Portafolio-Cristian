@@ -325,8 +325,6 @@ section {
 .details-container {
   padding: 1.5rem;
   flex: 1;
-  min-width: 260px;
-  max-width: 360px;
   background: var(--color-bg);
   border-radius: 2rem;
   border: 0.1rem solid var(--color-border);
