@@ -416,3 +416,49 @@ section {
   margin-top: auto;
   width: fit-content;
 }
+
+/* CONTACT */
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 4vh;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--color-card);
+  border: 0.1rem solid var(--color-border);
+  border-radius: 2rem;
+  padding: 0.9rem 1.75rem;
+}
+
+.contact-info-container a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+
+footer {
+  height: 12vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+footer p {
+  text-align: center;
+}
