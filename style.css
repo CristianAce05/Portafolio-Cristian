@@ -1,0 +1,187 @@
+/* GENERAL */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Open+Sans:wght@300;400;600&display=swap");
+
+:root {
+  --color-bg: #f3f3f3;
+  --color-card: #ffffff;
+  --color-text: #141414;
+  --color-text-secondary: #555555;
+  --color-border: #a3a3a3;
+  --color-accent: #2563eb;
+  --color-accent-dark: #1d4ed8;
+  --font-heading: "Poppins", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+h1,
+h2,
+h3,
+.logo,
+.nav-links,
+.btn {
+  font-family: var(--font-heading);
+}
+
+p {
+  color: var(--color-text-secondary);
+}
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+:focus-visible {
+  outline: 0.15rem solid var(--color-accent);
+  outline-offset: 0.2rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  a,
+  .btn,
+  .hamburger-icon span,
+  .menu-links,
+  .project-card {
+    transition: none;
+  }
+
+  .project-card:hover {
+    transform: none;
+  }
+}
+
+/* NAV */
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.25rem;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+}
+
+.logo {
+  font-size: 1.75rem;
+  font-weight: 600;
+  cursor: default;
+}
+
+/* HAMBURGER NAV */
+
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-text);
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(9px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(9px, -5px);
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--color-card);
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links a {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+/* SECTIONS */
+
+section {
+  padding-top: 4vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
