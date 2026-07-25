@@ -777,6 +777,7 @@ git commit -m "Add about section"
 
 .article-container .icon {
   height: 1.1rem;
+  margin-bottom: 0;
   flex-shrink: 0;
 }
 ```
