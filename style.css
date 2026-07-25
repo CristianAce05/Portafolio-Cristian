@@ -369,3 +369,50 @@ section {
   margin-bottom: 0;
   flex-shrink: 0;
 }
+
+/* PROJECTS */
+
+#projects {
+  text-align: center;
+  padding-bottom: 2vh;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: var(--color-card);
+  border: 0.1rem solid var(--color-border);
+  border-radius: 1.5rem;
+  padding: 1.75rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-color: var(--color-accent);
+}
+
+.project-card h3 {
+  color: var(--color-accent);
+}
+
+.project-tech {
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.project-card .btn {
+  align-self: flex-start;
+  margin-top: auto;
+  width: fit-content;
+}
