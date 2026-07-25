@@ -276,7 +276,9 @@ section {
   width: 8rem;
   border-radius: 2rem;
   cursor: pointer;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
@@ -386,7 +388,7 @@ section {
   display: flex;
   align-items: center;
   width: 10rem;
-  justify-content: space-around;
+  justify-content: flex-start;
   gap: 0.5rem;
 }
 
