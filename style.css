@@ -260,20 +260,6 @@ section {
   height: 2rem;
 }
 
-.icon-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--color-accent);
-  border-radius: 50%;
-  padding: 0.4rem;
-}
-
-.icon-badge .icon {
-  display: block;
-  filter: invert(1) brightness(2);
-}
-
 /* BUTTONS */
 
 .btn-container {
@@ -345,7 +331,7 @@ section {
   text-align: center;
 }
 
-.details-container .icon-badge {
+.details-container .icon {
   margin-bottom: 0.5rem;
 }
 
@@ -398,6 +384,7 @@ section {
 
 .article-container article {
   display: flex;
+  align-items: center;
   width: 10rem;
   justify-content: space-around;
   gap: 0.5rem;
@@ -412,7 +399,7 @@ section {
   font-size: 0.85rem;
 }
 
-.article-container .icon-badge {
+.article-container .icon {
   cursor: default;
 }
 
@@ -510,6 +497,7 @@ section {
 
 .contact-info-upper-container {
   display: flex;
+  align-items: center;
   justify-content: center;
   border-radius: 2rem;
   border: 0.1rem solid var(--color-border);
