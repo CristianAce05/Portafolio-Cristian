@@ -266,7 +266,7 @@ section {
 
 .btn {
   font-family: Arial, sans-serif;
-  font-size: 13.3333px;
+  font-size: 0.833rem;
   font-weight: 600;
   padding: 1rem;
   width: 8rem;
@@ -323,7 +323,7 @@ section {
 .details-container {
   padding: 1.5rem;
   flex: 1;
-  background: var(--color-bg);
+  background: var(--color-card-alt);
   border-radius: 2rem;
   border: 0.1rem solid var(--color-border);
   text-align: center;
@@ -467,7 +467,7 @@ section {
 .project-btn {
   display: inline-block;
   font-family: Arial, sans-serif;
-  font-size: 13.3333px;
+  font-size: 0.833rem;
   padding: 0.5rem 1rem;
   border: 1px solid var(--color-accent);
   border-radius: 0.5rem;
