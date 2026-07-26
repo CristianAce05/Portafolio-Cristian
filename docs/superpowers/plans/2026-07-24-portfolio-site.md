@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Build Cristian Acevedo's single-page portfolio site (`index.html`, `style.css`, `mediaqueries.css`, `script.js`) in the `Portafolio-Cristian` repo, ready to deploy on GitHub Pages.
+**Goal:** Build Cristian Acevedo's single-page portfolio site (`index.html`, `style.css`, `mediaqueries.css`, `script.js`) in the `Portfolio-Cristian` repo, ready to deploy on GitHub Pages.
 
 **Architecture:** Plain static HTML/CSS/JS, no build step. One `index.html` with six anchor-linked sections (Hero, About, Experience, Projects, Contact, Footer), styled with CSS custom properties for a grey/white base + blue accent palette, with a small `script.js` for the mobile hamburger menu. All content is hardcoded (no CMS/backend).
 
@@ -18,7 +18,7 @@
 - Respect `prefers-reduced-motion: reduce` — transitions/transforms (hamburger animation, project-card hover lift) must be disabled for users who request it.
 - No phone number anywhere on the page — contact methods are email, LinkedIn, GitHub only.
 - No placeholder/lorem-ipsum content — every piece of copy comes from the approved spec (`docs/superpowers/specs/2026-07-24-portfolio-site-design.md`).
-- Repo: `https://github.com/CristianAce05/Portafolio-Cristian.git`, already cloned to `~/Portafolio-Cristian`, currently has one commit (the design spec).
+- Repo: `https://github.com/CristianAce05/Portfolio-Cristian.git`, already cloned to `~/Portfolio-Cristian`, currently has one commit (the design spec).
 
 ---
 
@@ -306,7 +306,7 @@ section {
 
 Run:
 ```bash
-cd ~/Portafolio-Cristian
+cd ~/Portfolio-Cristian
 python3 -m http.server 8000 &
 sleep 1
 curl -s http://localhost:8000/ | grep -oE 'id="(profile|about|experience|projects|contact)"'
@@ -317,7 +317,7 @@ Expected: five lines printed, one per id (`id="profile"`, `id="about"`, `id="exp
 - [ ] **Step 5: Commit**
 
 ```bash
-cd ~/Portafolio-Cristian
+cd ~/Portfolio-Cristian
 git add index.html style.css mediaqueries.css script.js
 git commit -m "Add page skeleton, nav, and base styles"
 ```
@@ -342,7 +342,7 @@ git commit -m "Add page skeleton, nav, and base styles"
 - [ ] **Step 1: Download the GitHub avatar as the profile photo**
 
 ```bash
-cd ~/Portafolio-Cristian
+cd ~/Portfolio-Cristian
 mkdir -p assets/icons
 curl -sL "https://avatars.githubusercontent.com/u/230878784?v=4&s=460" -o assets/profile-pic.png
 file assets/profile-pic.png
@@ -352,8 +352,8 @@ Expected: output contains `PNG image data`.
 - [ ] **Step 2: Copy the resume PDF into the project**
 
 ```bash
-cp "/private/tmp/claude-501/-Users-acevedo-DemoDayProject-ThreatScope/79ec628e-2535-41d9-b244-1a9e741a4647/scratchpad/resume.pdf" ~/Portafolio-Cristian/assets/resume.pdf
-file ~/Portafolio-Cristian/assets/resume.pdf
+cp "/private/tmp/claude-501/-Users-acevedo-DemoDayProject-ThreatScope/79ec628e-2535-41d9-b244-1a9e741a4647/scratchpad/resume.pdf" ~/Portfolio-Cristian/assets/resume.pdf
+file ~/Portfolio-Cristian/assets/resume.pdf
 ```
 Expected: output contains `PDF document`.
 
@@ -399,7 +399,7 @@ Expected: output contains `PDF document`.
 
 Run:
 ```bash
-cd ~/Portafolio-Cristian
+cd ~/Portfolio-Cristian
 ls -la assets/ assets/icons/
 ```
 Expected: `profile-pic.png`, `resume.pdf` listed under `assets/`; six `.svg` files listed under `assets/icons/`.
@@ -407,7 +407,7 @@ Expected: `profile-pic.png`, `resume.pdf` listed under `assets/`; six `.svg` fil
 - [ ] **Step 10: Commit**
 
 ```bash
-cd ~/Portafolio-Cristian
+cd ~/Portfolio-Cristian
 git add assets/
 git commit -m "Add profile photo, resume, and icon assets"
 ```
@@ -555,7 +555,7 @@ git commit -m "Add profile photo, resume, and icon assets"
 
 Run:
 ```bash
-cd ~/Portafolio-Cristian
+cd ~/Portfolio-Cristian
 python3 -m http.server 8000 &
 sleep 1
 open http://localhost:8000/
@@ -566,7 +566,7 @@ Then: `kill %1`
 - [ ] **Step 4: Commit**
 
 ```bash
-cd ~/Portafolio-Cristian
+cd ~/Portfolio-Cristian
 git add index.html style.css
 git commit -m "Add hero section"
 ```
@@ -668,7 +668,7 @@ git commit -m "Add hero section"
 
 Run:
 ```bash
-cd ~/Portafolio-Cristian
+cd ~/Portfolio-Cristian
 grep -c "Holberton Coding School" index.html
 grep -c "Backend Systems" index.html
 ```
@@ -677,7 +677,7 @@ Expected: both commands print `1` or higher (non-zero).
 - [ ] **Step 4: Commit**
 
 ```bash
-cd ~/Portafolio-Cristian
+cd ~/Portfolio-Cristian
 git add index.html style.css
 git commit -m "Add about section"
 ```
@@ -786,7 +786,7 @@ git commit -m "Add about section"
 
 Run:
 ```bash
-cd ~/Portafolio-Cristian
+cd ~/Portfolio-Cristian
 for skill in Python Flask MySQL Docker; do grep -c "$skill" index.html; done
 ```
 Expected: four non-zero counts printed.
@@ -794,7 +794,7 @@ Expected: four non-zero counts printed.
 - [ ] **Step 4: Commit**
 
 ```bash
-cd ~/Portafolio-Cristian
+cd ~/Portfolio-Cristian
 git add index.html style.css
 git commit -m "Add experience/skills section"
 ```
@@ -901,7 +901,7 @@ git commit -m "Add experience/skills section"
 
 Run:
 ```bash
-cd ~/Portafolio-Cristian
+cd ~/Portfolio-Cristian
 for p in ThreatScope HBnB "Task Manager" "Simple Shell"; do grep -c "$p" index.html; done
 ```
 Expected: four non-zero counts printed.
@@ -909,7 +909,7 @@ Expected: four non-zero counts printed.
 - [ ] **Step 4: Commit**
 
 ```bash
-cd ~/Portafolio-Cristian
+cd ~/Portfolio-Cristian
 git add index.html style.css
 git commit -m "Add projects section"
 ```
@@ -1007,7 +1007,7 @@ footer p {
 
 Run:
 ```bash
-cd ~/Portafolio-Cristian
+cd ~/Portfolio-Cristian
 grep -c "acecristian35@gmail.com" index.html
 grep -c "mailto:" index.html
 ```
@@ -1016,7 +1016,7 @@ Expected: both non-zero.
 - [ ] **Step 4: Commit**
 
 ```bash
-cd ~/Portafolio-Cristian
+cd ~/Portfolio-Cristian
 git add index.html style.css
 git commit -m "Add contact section and footer"
 ```
@@ -1124,7 +1124,7 @@ function toggleMenu() {
 
 Run:
 ```bash
-cd ~/Portafolio-Cristian
+cd ~/Portfolio-Cristian
 python3 -m http.server 8000 &
 sleep 1
 open http://localhost:8000/
@@ -1135,7 +1135,7 @@ Then: `kill %1`
 - [ ] **Step 4: Commit**
 
 ```bash
-cd ~/Portafolio-Cristian
+cd ~/Portfolio-Cristian
 git add script.js mediaqueries.css
 git commit -m "Add hamburger menu behavior and responsive layout"
 ```
@@ -1159,7 +1159,7 @@ Personal portfolio site built with plain HTML, CSS, and JavaScript.
 
 ## Live site
 
-https://cristianace05.github.io/Portafolio-Cristian/
+https://cristianace05.github.io/Portfolio-Cristian/
 
 ## Sections
 
@@ -1176,7 +1176,7 @@ No build tools — plain HTML5, CSS3, and vanilla JavaScript, deployed on GitHub
 - [ ] **Step 2: Commit and push everything**
 
 ```bash
-cd ~/Portafolio-Cristian
+cd ~/Portfolio-Cristian
 git add README.md
 git commit -m "Add README"
 git push -u origin main
@@ -1185,13 +1185,13 @@ Expected: push succeeds, `git log --oneline` on GitHub matches local history.
 
 - [ ] **Step 3: Enable GitHub Pages**
 
-Tell the user to go to `https://github.com/CristianAce05/Portafolio-Cristian/settings/pages`, set **Source** to "Deploy from a branch", branch `main`, folder `/ (root)`, then save. This step requires manual action in the GitHub UI — it cannot be done via git push alone.
+Tell the user to go to `https://github.com/CristianAce05/Portfolio-Cristian/settings/pages`, set **Source** to "Deploy from a branch", branch `main`, folder `/ (root)`, then save. This step requires manual action in the GitHub UI — it cannot be done via git push alone.
 
 - [ ] **Step 4: Verify the live site**
 
 Run (after waiting ~1 minute for Pages to build):
 ```bash
-curl -s -o /dev/null -w "%{http_code}\n" https://cristianace05.github.io/Portafolio-Cristian/
+curl -s -o /dev/null -w "%{http_code}\n" https://cristianace05.github.io/Portfolio-Cristian/
 ```
 Expected: `200`. If it returns `404`, Pages may still be building — wait another minute and retry.
 

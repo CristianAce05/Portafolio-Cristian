@@ -68,7 +68,7 @@ Note: `--color-bg`, `--color-card`, `--color-text-secondary`, `--color-border` a
 
 Run:
 ```bash
-cd ~/Portafolio-Cristian
+cd ~/Portfolio-Cristian
 grep -n "color-accent\|color-text:" style.css | head -5
 grep -c "#2563eb\|#1d4ed8\|#141414" style.css
 ```
@@ -79,7 +79,7 @@ Then visually confirm in the browser (server already running at http://localhost
 - [ ] **Step 3: Commit**
 
 ```bash
-cd ~/Portafolio-Cristian
+cd ~/Portfolio-Cristian
 git add style.css
 git commit -m "Redesign: swap blue accent for monochrome grey/black palette"
 ```
@@ -224,7 +224,7 @@ Note on the phone-tier profile picture (the `.section__pic-container` rule in th
 
 Run:
 ```bash
-cd ~/Portafolio-Cristian
+cd ~/Portfolio-Cristian
 python3 -m http.server 8000 &
 sleep 1
 curl -s -o /dev/null -w "%{http_code}\n" http://localhost:8000/
@@ -237,7 +237,7 @@ Then: `kill %1`
 - [ ] **Step 5: Commit**
 
 ```bash
-cd ~/Portafolio-Cristian
+cd ~/Portfolio-Cristian
 git add style.css mediaqueries.css
 git commit -m "Redesign: match reference site's sizing and breakpoints"
 ```
@@ -342,7 +342,7 @@ Change `minmax(240px, 1fr)` to `minmax(280px, 1fr)` — gives each category card
 
 Run:
 ```bash
-cd ~/Portafolio-Cristian
+cd ~/Portfolio-Cristian
 for skill in Python Flask MySQL Docker GDB; do grep -c "$skill" index.html; done
 grep -c "<h3>Python</h3>" index.html
 ```
@@ -353,7 +353,7 @@ Then visually confirm in the browser: each of the 4 skill category cards shows i
 - [ ] **Step 4: Commit**
 
 ```bash
-cd ~/Portafolio-Cristian
+cd ~/Portfolio-Cristian
 git add index.html style.css
 git commit -m "Redesign: restyle experience section skills as wrapping tiles"
 ```
@@ -531,7 +531,7 @@ Change `align-self: flex-start;` to `align-self: center;` and remove `width: fit
 
 Run:
 ```bash
-cd ~/Portafolio-Cristian
+cd ~/Portfolio-Cristian
 ls -la assets/projects/
 grep -c "project-card-img" index.html
 grep -c "project-card-subtitle" index.html
@@ -543,7 +543,7 @@ Then visually confirm in the browser: all four project cards show a top image, a
 - [ ] **Step 8: Commit**
 
 ```bash
-cd ~/Portafolio-Cristian
+cd ~/Portfolio-Cristian
 git add assets/projects/ index.html style.css
 git commit -m "Redesign: add project card images and subtitles"
 ```

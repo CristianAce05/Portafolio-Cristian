@@ -4,7 +4,7 @@ Personal portfolio site built with plain HTML, CSS, and JavaScript.
 
 ## Live site
 
-https://cristianace05.github.io/Portafolio-Cristian/
+https://cristianace05.github.io/Portfolio-Cristian/
 
 ## Sections
 

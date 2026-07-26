@@ -2,7 +2,7 @@
 
 ## Goal
 
-A single-page personal portfolio for Cristian Acevedo, published on GitHub (repo `CristianAce05/Portafolio-Cristian`), to showcase his background, skills, and projects. Design closely follows the structure of a reference portfolio (Sebastian Soto's, https://portafolio-sebastian-delta.vercel.app) with Cristian's own content, and a blue accent color instead of pure monochrome.
+A single-page personal portfolio for Cristian Acevedo, published on GitHub (repo `CristianAce05/Portfolio-Cristian`), to showcase his background, skills, and projects. Design closely follows the structure of a reference portfolio (Sebastian Soto's, https://portafolio-sebastian-delta.vercel.app) with Cristian's own content, and a blue accent color instead of pure monochrome.
 
 ## Tech stack
 
@@ -11,7 +11,7 @@ Plain HTML, CSS, and vanilla JavaScript. No build tools, no frameworks. Deploy t
 ## File structure
 
 ```
-Portafolio-Cristian/
+Portfolio-Cristian/
 ├── index.html
 ├── style.css
 ├── mediaqueries.css
